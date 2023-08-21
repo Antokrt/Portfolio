@@ -1,0 +1,47 @@
+@import "var";
+.container{
+  a{
+    &:before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1.5px;
+      bottom: -10px;
+      left: 0;
+      opacity: 0.7;
+      background-color: $main;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover:before{
+      visibility: visible;
+      width: 100%;
+    }
+    &:hover{
+      color: $main;
+      transition: 0.2s;
+      letter-spacing: 1px;
+      svg{
+        transition: 0.2s;
+        color: $main;
+      }
+    }
+    transition: 0.2s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-style: italic;
+    color: $grey;
+    font-weight: bold;
+    svg{
+      stroke-width: 2px;
+      width: 16px;
+      margin-right: 8px;
+      color: $grey;
+      transition: 0.2s;
+    }
+  }
+
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Ogla",
+    "label": "Ebook Application",
+    "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application moderne et agréable, à terme l'application permettra de rémunérer ses écrivains...",
+    "finish": false,
+    "open": true,
+    "adress": "https://ogla.vercel.app/",
+    "desktopImg": "/mockup/oglaD.png",
+    "phoneImg": "/mockup/oglaP.png",
+    "publishGithub": false,
+    "technos": [
+      "Typescript",
+      "React",
+      "NextJS",
+      "Sass",
+      "Responsive",
+      "Stripe",
+      "NodeJS",
+      "NestJS",
+      "MongoDB",
+      "PostgreSQL",
+      "Google Oauth",
+      "Aws",
+      "Vercel",
+      "Heroku",
+      "Seo"
+    ]
+  },
+  {
+    "title": "Groupomania",
+    "label": "Réseau social professionnel",
+    "description": "Groupomania est un réseau social professionnel permettant aux entreprises de créer des liens et interactions entre leurs employés, l'application contient toutes les fonctionnalités d'un réseau social classique...",
+    "desktopImg": "/mockup/groupomaniaD.png",
+    "phoneImg": "/mockup/groupomaniaP.png",
+    "finish": false,
+    "open": true,
+    "adress": "https://github.com/Antokrt/Groupomania",
+    "publishGithub": true,
+    "technos": [
+      "Angular",
+      "Typescript",
+      "RxJS",
+      "Sass",
+      "Bootstrap",
+      "NodeJS",
+      "Express",
+      "Sequelize",
+      "MySQL",
+      "Jwt auth",
+      "Multer (file management)",
+      "Responsive",
+      "Seo"
+    ]
+  },
+  {
+    "title": "Piquante",
+    "label": "Api NodeJS",
+    "description": "Réalisation de l'API de Piquante, une application web permettant à tous de publier et noter des sauces. Piquante utilise MongoDB et Express pour le côté serveur",
+    "finish": false,
+    "open": false,
+    "desktopImg": "/mockup/piquanteD.png",
+    "phoneImg": null,
+    "adress": "https://github.com/Antokrt/Piquante",
+    "publishGithub": true,
+    "technos": [
+      "Javascript",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Basic Auth (jwt)",
+      "Multer (file management)"
+    ]
+  },
+  {
+    "title": "Orinoco",
+    "label": "Boutique en ligne",
+    "description": "Orinoco est une boutique en ligne spécialisé dans la vente de caméras vintage, la mission est totalement front-end et consiste en la création d'un panier ainsi que l'envoie des commandes clients à l'API. ",
+    "finish": false,
+    "open": true,
+    "desktopImg": "/mockup/orinocoD.png",
+    "phoneImg": null,
+    "adress": "https://github.com/Antokrt/Orinoco",
+    "publishGithub": true,
+    "technos": [
+      "Html",
+      "Javascript",
+      "Css",
+      "Bootstrap",
+      "Reponsive",
+      "Seo"
+    ]
+  },
+  {
+    "title": "OhMyFood",
+    "label": "Application mobile web gastronomique",
+    "description": "OhMyFood est une application web mobile permettant de commander des plats gastronomiques à la façon UberEats.",
+    "finish": false,
+    "open": true,
+    "desktopImg": "/mockup/ohmyfoodD.png",
+    "phoneImg": "/mockup/ohmyfoodP.png",
+    "adress": "https://github.com/Antokrt/OhMyFood",
+    "publishGithub": true,
+    "technos": [
+      "Yeoman",
+      "Html",
+      "Scss",
+      "Responsive",
+      "Seo"
+    ]
+  }
+]

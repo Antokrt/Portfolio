@@ -1,0 +1,89 @@
+@import "var";
+
+
+
+.btnSlide{
+  &:hover{
+    transition: 0.2s!important;
+    opacity: 1!important;
+  }
+  &:active{
+    transform: scale(0.8) !important;
+    transition: 0.2s;
+  }
+  &:disabled{
+    cursor: initial!important;
+  }
+
+  transition: 0.2s!important;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: $main!important;
+  opacity: 0.4!important;
+  font-family: 'Bitter',sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.arrowPrev{
+  &:before{
+    content: "🡠";
+    margin-right:3px;
+    -webkit-text-stroke-width: 0.8px;
+  }
+}
+
+.arrowNext{
+  &:before{
+content: '🡢';
+    margin-left:5px;
+    -webkit-text-stroke-width: 0.8px;
+  }
+}
+
+
+.fadeIn {
+  transition: 0.2s;
+  -webkit-animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both !important;
+  animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both !important;
+}
+
+
+.hidden{
+  opacity: 0;
+  transition: 0.2s;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0!important;
+  }
+
+  100%{
+    opacity: 1!important;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0!important;
+  }
+  100% {
+    opacity: 1!important;
+  }
+}
+
+
+@media screen and (max-width: 600px){
+.btnSlide{
+font-size: 16px!important;
+  background-color: transparent!important;
+  color: $main!important;
+}
+}
+
+
+

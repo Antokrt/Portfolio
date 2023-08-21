@@ -1,0 +1,30 @@
+@import "var";
+.container{
+  &:hover{
+    svg{
+      opacity: 1;
+      transition: 0.2s;
+    }
+  }
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  svg{
+    min-width: 60px;
+    width: 5vw;
+    opacity: 0.9;
+    transition: 0.2s;
+  }
+
+  img{
+    min-width: 50px;
+    width: 5vw!important;
+  }
+
+  p{
+    text-align: center;
+    font-weight: bold;
+  }
+}

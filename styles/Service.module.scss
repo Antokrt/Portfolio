@@ -1,0 +1,167 @@
+@import "var";
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  font-family: 'Bitter',sans-serif;
+  flex: 1;
+  width: 100vw;
+  transition: 0.2s;
+  overflow: hidden!important;
+}
+
+
+.containerScroll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.containerMain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  width: 80%;
+  overflow: hidden;
+  h4{
+    color: $main;
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 0.4px;
+    font-style: italic;
+  }
+  h2{
+    color: $blue;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .description{
+    width: 1100px;
+    line-height: 30px;
+    text-align: center;
+    color: $main;
+    font-size: 17px;
+  }
+
+  .linkedin{
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 17px;
+    a{
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  .containerSkillsS {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .containerSkillsF {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .containerSkillsPhone{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 40px;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: solid 1px rgba(128, 128, 128, 0.16);
+    padding-top: 20px;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+  .description{
+width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 770px){
+.linkedin{
+  margin-top: 20px!important;
+}
+
+}
+
+@media screen and (max-width: 570px){
+  .containerScroll{
+    padding-top: 120px;
+    padding-bottom: 30px;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  .container{
+    h2{
+      font-size: 30px;
+    }
+
+    h4{
+      font-size: 15px;
+    }
+  }
+
+  .jsOnly{
+    border-top: solid 1px rgba(128, 128, 128, 0.16);
+    padding-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .containerSkillsPhone{
+    border-top: none!important;
+    margin-top: 0!important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+  }
+
+  .description{
+    font-size: 15px!important;
+  }
+}
+
+
+@media screen and (max-width: 300px){
+  .containerSkillsByThree{
+    grid-template-columns: 1fr!important;
+  }
+}
+
+
+@media screen and (orientation: landscape) and (max-height: 600px) and (max-width: 1000px){
+  .containerScroll{
+    margin-top: 100px;
+    padding-bottom: 30px;
+  }
+}
