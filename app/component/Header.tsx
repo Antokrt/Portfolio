@@ -47,7 +47,7 @@ const Header = () => {
                 <div onClick={() => dispatch(toogle())}>
                     <MenuSvg />
                 </div>
-                <MoonIcon className={styles.moon}/>
+                {/*<MoonIcon className={styles.moon}/>*/}
             </div>
 
         </div>

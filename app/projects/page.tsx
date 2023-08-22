@@ -34,14 +34,14 @@ const Projects = () => {
         open: boolean,
         technos: Array<string>,
         desktopImg: string,
-        phoneImg: string
+        phoneImg: string | null
     }
 
 
     const openMenu = useSelector((state: RootState) => state.menu.value);
     const [projectList, setProjectList] = useState<Project[]>(projects);
     const [startAnim,setStartAnim] = useState(false);
-    const carousselRef = useRef();
+    const carousselRef = useRef<HTMLDivElement | null>(null);
     const sizeProjects: number = projectList.length;
     const [index, setIndex] = useState<number>(0);
 
@@ -77,10 +77,10 @@ const Projects = () => {
                         defaultControlsConfig={
                             {
                                 'nextButtonText':" ",
-                                'nextButtonStyle':index === sizeProjects - 1 ? {display:'none'} : null,
+                                'nextButtonStyle':index === sizeProjects - 1 ? {display:'none'} : {display:'initial'},
                                 'nextButtonClassName':styles.btnSlide + ' ' + styles.arrowNext + ' ' + styles.fadeIn,
                                 'prevButtonText':" ",
-                                'prevButtonStyle':index === 0 ? {display:'none'} : null,
+                                'prevButtonStyle':index === 0 ? {display:'none'} : {display: 'initial'},
                                 'prevButtonClassName':styles.btnSlide + ' ' + styles.arrowPrev,
                             }
                         }

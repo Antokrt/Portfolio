@@ -3,7 +3,7 @@
 import {RootState} from "@/app/GlobalRedux/store";
 import {MenuOpen} from "@/app/component/MenuOpen";
 import anim from "@/styles/Anim.module.scss";
-import {Fragment, ReactNode} from "react";
+import {Fragment, ReactNode, useEffect} from "react";
 import styles from "@/styles/Service.module.scss";
 import {useSelector} from "react-redux";
 import {
@@ -13,7 +13,7 @@ import {
     NestJSCard,
     NextJsCard,
     NodejsCard,
-    ReactCard, ResponsiveCard, SeoCard, W3CCard,
+    ReactCard, ResponsiveCard, SeoCard,
     WordpressCard
 } from "@/app/component/SkillCard/card";
 import Link from "next/link";
@@ -31,9 +31,19 @@ const Service = () => {
 
     const openMenu = useSelector((state: RootState) => state.menu.value);
     const [activeKey, setActiveKey] = useState<string | null>(null);
+    const [activeTitle,setActiveTitle] = useState<string | null>(null)
     const [listSkill, setListSkills] = useState<Skill[]>(skillcards);
     const [width,height] = ScreenSize();
     const orientation = useOrientation();
+
+    const [animateTitle, setAnimateTitle] = useState(false);
+
+    useEffect(() => {
+        setAnimateTitle(true);
+        setTimeout(() => {
+            setAnimateTitle(false);
+        }, 1200); // Par exemple, si l'animation dure 1 seconde
+    }, [activeTitle]);
 
     const parseText = (text:string): ReactNode[] => {
         const jsxParts: React.ReactNode[] = [];
@@ -61,6 +71,13 @@ const Service = () => {
         return parseText(skill.text);
     }
 
+    const changeActive = (key:string) => {
+        if(!animateTitle){
+            setActiveKey(key);
+            setActiveTitle(key);
+        }
+    }
+
 
     return (
         <>
@@ -75,13 +92,15 @@ const Service = () => {
                 <div className={styles.containerScroll}>
                     <div className={styles.containerMain}>
                         <h4>Une expérience web plus solide et plus fiable</h4>
-                        <h2>Services et compétences</h2>
+                        <h2 className={animateTitle ? anim.textFocusIn : ' '}>
+                            {activeTitle ? activeTitle : 'Services et compétences'}
+                        </h2>
 
 
                         {
                             width <= 500 &&
                             <div className={styles.jsOnly}>
-                                <JsCard onclick={(title) => setActiveKey(title)}/>
+                                <JsCard onclick={(title) => changeActive(title)}/>
                             </div>
                         }
 
@@ -90,16 +109,16 @@ const Service = () => {
                             <div className={styles.containerSkillsPhone}>
                                 {
                                     width > 500 &&
-                                    <JsCard onclick={(title) => setActiveKey(title)}/>
+                                    <JsCard onclick={(title) => changeActive(title)}/>
                                 }
-                                <ReactCard onclick={(title) => setActiveKey(title)}/>
-                                <NextJsCard onclick={(title) => setActiveKey(title)}/>
-                                <WordpressCard onclick={(title) => setActiveKey(title)}/>
-                                <NodejsCard onclick={(title) => setActiveKey(title)}/>
-                                <NestJSCard onclick={(title) => setActiveKey(title)}/>
-                                <DesignCard onclick={(title) => setActiveKey(title)}/>
-                                <ResponsiveCard onclick={(title) => setActiveKey(title)}/>
-                                <SeoCard onclick={(title) => setActiveKey(title)}/>
+                                <ReactCard onclick={(title) => changeActive(title)}/>
+                                <NextJsCard onclick={(title) => changeActive(title)}/>
+                                <WordpressCard onclick={(title) => changeActive(title)}/>
+                                <NodejsCard onclick={(title) => changeActive(title)}/>
+                                <NestJSCard onclick={(title) => changeActive(title)}/>
+                                <DesignCard onclick={(title) => changeActive(title)}/>
+                                <ResponsiveCard onclick={(title) => changeActive(title)}/>
+                                <SeoCard onclick={(title) => changeActive(title)}/>
                             </div>
                         }
 
@@ -117,8 +136,8 @@ const Service = () => {
                                     vos <strong> idées en réalité
                                     numérique. </strong>
                                 </p> :
-                                <p className={styles.description}>
-                                    {getText(activeKey)}
+                                <p className={animateTitle ? styles.description + ' ' + anim.textFocusIn : styles.description}>
+                                    {getText(activeKey) || ''}
                                 </p>
                         }
 
@@ -127,19 +146,19 @@ const Service = () => {
                             width > 770 &&
                                 <>
                                     <div className={styles.containerSkillsF}>
-                                        <JsCard onclick={(title) => setActiveKey(title)}/>
-                                        <ReactCard onclick={(title) => setActiveKey(title)}/>
-                                        <NextJsCard onclick={(title) => setActiveKey(title)}/>
-                                        <WordpressCard onclick={(title) => setActiveKey(title)}/>
+                                        <JsCard onclick={(title) => changeActive(title)}/>
+                                        <ReactCard onclick={(title) => changeActive(title)}/>
+                                        <NextJsCard onclick={(title) => changeActive(title)}/>
+                                        <WordpressCard onclick={(title) => changeActive(title)}/>
 
                                     </div>
 
                                     <div className={styles.containerSkillsS}>
-                                        <NodejsCard onclick={(title) => setActiveKey(title)}/>
-                                        <NestJSCard onclick={(title) => setActiveKey(title)}/>
-                                        <DesignCard onclick={(title) => setActiveKey(title)}/>
-                                        <ResponsiveCard onclick={(title) => setActiveKey(title)}/>
-                                        <SeoCard onclick={(title) => setActiveKey(title)}/>
+                                        <NodejsCard onclick={(title) => changeActive(title)}/>
+                                        <NestJSCard onclick={(title) => changeActive(title)}/>
+                                        <DesignCard onclick={(title) => changeActive(title)}/>
+                                        <ResponsiveCard onclick={(title) => changeActive(title)}/>
+                                        <SeoCard onclick={(title) => changeActive(title)}/>
                                     </div>
                                 </>
                         }

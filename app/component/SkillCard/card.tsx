@@ -1,8 +1,12 @@
 import styles from '../../../styles/SkillCard.module.scss';
 import Image from "next/image";
+import React from "react";
 
-export const JsCard = ({onclick}) => {
+interface JsCardProps{
+    onclick: (langage:string) => void;
+}
 
+export const JsCard: React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -22,7 +26,7 @@ export const JsCard = ({onclick}) => {
 }
 
 
-export const ReactCard = ({onclick}) => {
+export const ReactCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -43,7 +47,7 @@ export const ReactCard = ({onclick}) => {
 }
 
 
-export const NextJsCard = ({onclick}) => {
+export const NextJsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
     const svg = () => {
         return (
             <svg
@@ -71,7 +75,7 @@ export const NextJsCard = ({onclick}) => {
 }
 
 
-export const WordpressCard = ({onclick}) => {
+export const WordpressCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
     const svg = () => {
         return (
             <svg
@@ -103,7 +107,7 @@ export const WordpressCard = ({onclick}) => {
 }
 
 
-export const ElementorCard = ({onclick}) => {
+export const ElementorCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     return (
         <div className={styles.container} onClick={() => onclick('elementor')}>
@@ -121,7 +125,7 @@ export const ElementorCard = ({onclick}) => {
 }
 
 
-export const NodejsCard = ({onclick}) => {
+export const NodejsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -143,7 +147,7 @@ export const NodejsCard = ({onclick}) => {
 }
 
 
-export const NestJSCard = ({onclick}) => {
+export const NestJSCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -164,7 +168,7 @@ export const NestJSCard = ({onclick}) => {
 }
 
 
-export const DesignCard = ({onclick}) => {
+export const DesignCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -201,7 +205,7 @@ export const DesignCard = ({onclick}) => {
 }
 
 
-export const ResponsiveCard = ({onclick}) => {
+export const ResponsiveCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (
@@ -228,7 +232,7 @@ export const ResponsiveCard = ({onclick}) => {
 }
 
 
-export const SeoCard = ({onclick}) => {
+export const SeoCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
 
     const svg = () => {
         return (

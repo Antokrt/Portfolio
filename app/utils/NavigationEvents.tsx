@@ -15,4 +15,6 @@ export function NavigationEvents(){
             dispatch(closeMenu());
         }
     },[pathname,searchParams])
+
+    return <></>
 }

@@ -1,9 +1,17 @@
 'use client'
 import Link from "next/link";
 import styles from '../../styles/AnimLink.module.scss';
-import {Fragment} from "react";
+import React, {Fragment} from "react";
 
-export const AnimLink = ({link,text, Icon,newTab,type}) => {
+interface LinkProps  {
+    link:string,
+    text:string,
+    Icon:unknown,
+    newTab?:boolean,
+    type?:string
+}
+
+export const AnimLink : React.FunctionComponent<LinkProps> = ({link,text, Icon,newTab,type}) => {
 
     if(type === 'email') {
         return (

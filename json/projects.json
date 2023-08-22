@@ -2,7 +2,7 @@
   {
     "title": "Ogla",
     "label": "Ebook Application",
-    "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application moderne et agréable, à terme l'application permettra de rémunérer ses écrivains...",
+    "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application web moderne et agréable...",
     "finish": false,
     "open": true,
     "adress": "https://ogla.vercel.app/",

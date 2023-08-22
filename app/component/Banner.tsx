@@ -4,8 +4,6 @@ import anim from '../../styles/Anim.module.scss';
 import {AnimLink} from "@/app/component/AnimLink";
 import Image from "next/image";
 import {ArrowLeftIcon, ArrowRightIcon, AtSymbolIcon, CheckIcon, CursorArrowRaysIcon} from "@heroicons/react/24/outline";
-import LightSwitchBtn from "@/app/component/LightSwitchBtn";
-import Link from "next/link";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/app/GlobalRedux/store";
 import {MenuOpen} from "@/app/component/MenuOpen";

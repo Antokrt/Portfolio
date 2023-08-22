@@ -1,7 +1,7 @@
 import styles from '../../styles/ProjectComponent.module.scss';
 import anim from '../../styles/Anim.module.scss';
 import {RootState} from "@/app/GlobalRedux/store";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import projects from "@/json/projects.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,11 +10,26 @@ import {ChevronRightIcon, CursorArrowRippleIcon} from "@heroicons/react/24/outli
 import {useSelector} from "react-redux";
 import AnimLink from "@/app/component/AnimLink";
 
+interface Project {
+    title:string,
+    label:string,
+    description:string,
+    finish:boolean,
+    open:boolean,
+    desktopImg:string,
+    phoneImg?:string | null,
+    adress:string,
+    publishGithub:boolean,
+    technos:string[],
+    disapear:boolean
+}
 
-export const ProjectComponent = ({title,label,description,finish,open,desktopImg,phoneImg,adress,publishGithub,technos,disapear}) => {
+export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,description,finish,open,desktopImg,phoneImg,adress,publishGithub,technos,disapear}) => {
 
         return (
             <div className={disapear ? styles.container + ' ' + anim.slideOutTop : styles.container}>
+
+
 
                 <div className={styles.projectContainer + ' ' + anim.fadeInQ}>
                     <div className={styles.absoCursor}>
@@ -42,7 +57,7 @@ export const ProjectComponent = ({title,label,description,finish,open,desktopImg
                     <div className={styles.links}>
                         {
                           open && publishGithub &&
-                            <AnimLink link={adress} target={true} text={'Voir le code'} Icon={<ChevronRightIcon/>}/>
+                            <AnimLink link={adress} newTab={true}  text={'Voir le code'} Icon={<ChevronRightIcon/>}/>
                         }
 
                         {

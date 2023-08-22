@@ -7,7 +7,7 @@ export const useOrientation = () => {
         const mediaQuery = window.matchMedia('(orientation: landscape)');
         setOrientation(mediaQuery.matches ? 'landscape' : 'portrait');
 
-        const handleOrientationChange = (event) => {
+        const handleOrientationChange = (event:MediaQueryListEvent) => {
             setOrientation(event.matches ? 'landscape' : 'portrait');
         };
 
