@@ -29,7 +29,7 @@
 
 .arrowPrev{
   &:before{
-    content: "🡠";
+    content: "<";
     margin-right:3px;
     -webkit-text-stroke-width: 0.8px;
   }
@@ -37,7 +37,7 @@
 
 .arrowNext{
   &:before{
-content: '🡢';
+content: '>';
     margin-left:5px;
     -webkit-text-stroke-width: 0.8px;
   }
@@ -79,6 +79,7 @@ content: '🡢';
 
 @media screen and (max-width: 600px){
 .btnSlide{
+
 font-size: 16px!important;
 }
 }
