@@ -19,7 +19,7 @@ const Banner = () => {
 
     return (
         <>
-   {/*         {
+            {
                 openMenu &&
     <MenuOpen/>
             }
@@ -27,7 +27,7 @@ const Banner = () => {
                 openMenu ?
                     <p>open true</p> :
                     <p>open false</p>
-            }*/}
+            }
             <div className={openMenu ? styles.container + ' ' + anim.hidden : styles.container}>
 
                 {/*<div className={styles.card}></div>*/}
