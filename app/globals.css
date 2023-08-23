@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     background-image: repeating-radial-gradient(circle at 17% 32%, rgba(229, 228, 228, 0.91), #fdf9f9 0.00185px);
     animation: animation 0.2s linear infinite;
+    -webkit-animation: animation 0.2s linear infinite;
     overflow-x: hidden;
 }
 
@@ -40,3 +41,12 @@ body {
 }
 
 
+
+/*
+@media screen and (max-width: 800px){
+    body{
+        background-color: #fdf9f9!important;
+        background-image: none!important;
+        animation: none!important;
+    }
+}*/
