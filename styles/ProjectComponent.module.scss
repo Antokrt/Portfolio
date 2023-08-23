@@ -10,6 +10,16 @@
   width: 100vw;
 }
 
+.loadImg{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  width: 40%;
+}
+
 .imgContainer{
   position: relative;
   display: flex;
