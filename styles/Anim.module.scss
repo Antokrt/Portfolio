@@ -455,6 +455,7 @@
 
 .pulse {
   animation: pulse 10s infinite;
+  z-index: -10;
 }
 
 @keyframes pulse {
