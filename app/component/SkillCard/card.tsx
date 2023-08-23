@@ -117,7 +117,6 @@ export const ElementorCard : React.FunctionComponent<JsCardProps> = ({onclick}) 
                 alt="Elementor Logo"
                 width={100}
                 height={50}
-                priority
             />
             <p>Elementor</p>
         </div>

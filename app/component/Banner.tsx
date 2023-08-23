@@ -34,7 +34,7 @@ const Banner = () => {
                                 alt="Antonin Koreta Logo"
                                 width={180}
                                 height={37}
-                                priority
+
                             />
                         </div>
 
