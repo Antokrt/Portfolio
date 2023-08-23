@@ -84,9 +84,10 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
 
                 </div>
 
-                <div className={styles.imgContainer + ' ' + anim.fadeInSlow}>
+                <div className={ready ? styles.imgContainer + ' ' + anim.fadeInQ : styles.imgContainer + ' ' + styles.opacityZero }>
                     <div className={styles.laptop}>
                         <Image
+                            onLoadingComplete={(img) => setReady(true)}
                             src={desktopImg}
                             alt="Laptop Logo"
                             width={180}
