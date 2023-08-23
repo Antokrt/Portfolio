@@ -70,10 +70,12 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                         phoneImg &&
                         <div className={styles.phoneContainer + ' ' + anim.fadeInSlow}>
                             <Image
+                                className={styles.opacity0}
                                 src={phoneImg}
                                 alt="Phone Logo"
                                 width={180}
                                 height={37}
+                                onLoadingComplete={(image) => image.classList.remove('opacity0')}
                                 priority
                             />
                         </div>
