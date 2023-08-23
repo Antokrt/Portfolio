@@ -23,6 +23,11 @@ const Banner = () => {
                 openMenu &&
     <MenuOpen/>
             }
+            {
+                openMenu ?
+                    <p>open true</p> :
+                    <p>open false</p>
+            }
             <div className={openMenu ? styles.container + ' ' + anim.hidden : styles.container}>
 
                 {/*<div className={styles.card}></div>*/}
