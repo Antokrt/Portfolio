@@ -51,7 +51,7 @@ const Banner = () => {
                                 width >= 400 &&
                                 <AnimLink link ={'/service'} Icon={<ArrowRightIcon/>} text={'Services'} />
                             }
-                            <AnimLink link={'/https://www.linkedin.com/in/akoreta/'} text={'Linkedin'} Icon={<LinkedinSvg/>}/>
+                            <AnimLink link={'https://www.linkedin.com/in/akoreta/'} newTab={true} text={'Linkedin'} Icon={<LinkedinSvg/>}/>
 
                         </div>
                     </div>
