@@ -76,7 +76,6 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                                 alt="Phone Logo"
                                 width={180}
                                 height={37}
-                                priority
                             />
                         </div>
                     }
@@ -92,7 +91,6 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                             alt="Laptop Logo"
                             width={180}
                             height={37}
-                            priority
                         />
                     </div>
 
