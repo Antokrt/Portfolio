@@ -33,7 +33,7 @@ const Banner = () => {
                 {/*<div className={styles.card}></div>*/}
                 <div className={styles.title}>
                     <div className={styles.containerGeo + ' ' + anim.fadeIn2}>
-                        <div className={anim.pulse}>
+                        <div>
                             <Image
                                 src={"/icons/geometric.png"}
                                 alt="Antonin Koreta Logo"
