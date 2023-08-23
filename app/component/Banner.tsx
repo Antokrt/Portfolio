@@ -14,7 +14,36 @@ import ScreenSize from "@/app/utils/ScreenSizeUtils";
 const Banner = () => {
     const dispatch = useDispatch();
     const openMenu = useSelector((state:RootState) => state.menu.value);
+    const profits = [-1, 9, 0, 8, -5, 6, -24];
+
+
     const [width,height] = ScreenSize();
+
+
+    const findMaxProfit = () => {
+        let maxStartIndex = 0;
+        let maxEndIndex = 0;
+        let currentStartIndex = 0;
+        let maxProfit = profits[0];
+        let currentProfit = profits[0];
+
+        for (let i = 1; i < profits.length; i++) {
+            if (currentProfit < 0) {
+                currentStartIndex = i;
+                currentProfit = profits[i];
+            } else {
+                currentProfit += profits[i];
+            }
+
+            if (currentProfit > maxProfit) {
+                maxProfit = currentProfit;
+                maxStartIndex = currentStartIndex;
+                maxEndIndex = i;
+            }
+        }
+
+        return [maxStartIndex, maxEndIndex];
+    }
 
 
     return (
@@ -23,11 +52,7 @@ const Banner = () => {
                 openMenu &&
     <MenuOpen/>
             }
-            {
-                openMenu ?
-                    <p>open true</p> :
-                    <p>open false</p>
-            }
+
             <div className={openMenu ? styles.container + ' ' + anim.hidden : styles.container}>
 
                 {/*<div className={styles.card}></div>*/}
@@ -47,7 +72,7 @@ const Banner = () => {
 
 
                     <div className={anim.fadeIn + ' ' + styles.content}>
-                        <h2>Développeur web Javascript</h2>
+                        <h2 onClick={() => alert(findMaxProfit())}>Développeur web Javascript</h2>
                         <h1>Antonin Koreta</h1>
                         <p>Création de sites web performants, esthétiques et optimisés pour une présence en ligne remarquable.</p>
                         <div className={styles.linkContainer}>
