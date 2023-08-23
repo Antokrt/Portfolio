@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+img{
+    display: none!important;
+}
+
 @keyframes animation {
     0% {
         background-position: 0px 0px;
