@@ -9,7 +9,6 @@ import {MenuOpen} from "@/app/component/MenuOpen";
 import {ChevronRightIcon, CursorArrowRippleIcon} from "@heroicons/react/24/outline";
 import {useSelector} from "react-redux";
 import AnimLink from "@/app/component/AnimLink";
-import {Rings} from "react-loader-spinner";
 
 interface Project {
     title:string,
@@ -77,6 +76,7 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                                 alt="Phone Logo"
                                 width={180}
                                 height={37}
+                                priority
                             />
                         </div>
                     }
@@ -85,37 +85,18 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
 
                 </div>
 
-
-                    <div className={ready ? styles.imgContainer + ' ' + anim.fadeInQ : styles.imgContainer + ' ' + styles.opacityZero }>
-                        <div className={styles.laptop}>
-                            <Image
-                                onLoadingComplete={(img) => setReady(true)}
-                                src={desktopImg}
-                                alt="Laptop Logo"
-                                width={180}
-                                height={37}
-                            />
-                        </div>
-
-
-                    </div>
-
-                {
-                    !ready &&
-                    <div className={styles.loadImg}>
-                        <Rings
-                            height="80"
-                            width="80"
-                            color="#7598f6"
-                            radius="6"
-                            wrapperStyle={{}}
-                            wrapperClass=""
-                            visible={true}
-                            ariaLabel="rings-loading"
+                <div className={styles.imgContainer + ' ' + anim.fadeInSlow}>
+                    <div className={styles.laptop}>
+                        <Image
+                            src={desktopImg}
+                            alt="Laptop Logo"
+                            width={180}
+                            height={37}
                         />
                     </div>
 
-                }
+
+                </div>
 
 
             </div>
