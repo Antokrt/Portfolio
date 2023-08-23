@@ -9,9 +9,7 @@ body {
     max-width: 100vw;
     width: auto;
     min-height: 100vh;
-    background-image: repeating-radial-gradient(circle at 17% 32%, rgba(229, 228, 228, 0.91), #fdf9f9 0.00185px);
-    animation: animation 0.2s linear infinite;
-    -webkit-animation: animation 0.2s linear infinite;
+    background-color: #eae5d9;
     overflow-x: hidden;
 }
 
