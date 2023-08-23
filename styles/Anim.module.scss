@@ -473,4 +473,8 @@
 
 
 
-
+@media screen and (max-width: 700px){
+  .pulse{
+    z-index: -1000;
+  }
+}
