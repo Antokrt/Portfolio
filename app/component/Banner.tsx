@@ -19,7 +19,7 @@ const Banner = () => {
 
     return (
         <>
-            {
+   {/*         {
                 openMenu &&
     <MenuOpen/>
             }
@@ -27,7 +27,7 @@ const Banner = () => {
                 openMenu ?
                     <p>open true</p> :
                     <p>open false</p>
-            }
+            }*/}
             <div className={openMenu ? styles.container + ' ' + anim.hidden : styles.container}>
 
                 {/*<div className={styles.card}></div>*/}
@@ -51,7 +51,7 @@ const Banner = () => {
                         <h1>Antonin Koreta</h1>
                         <p>Création de sites web performants, esthétiques et optimisés pour une présence en ligne remarquable.</p>
                         <div className={styles.linkContainer}>
-                            <AnimLink link ={'/projects'} Icon={<ArrowRightIcon/>} text={'Quelques projets'} />
+                            <AnimLink link ={'/projects'} newTab={false}  Icon={<ArrowRightIcon/>} text={'Quelques projets'} />
                             {
                                 width >= 400 &&
                                 <AnimLink link ={'/service'} Icon={<ArrowRightIcon/>} text={'Services'} />
