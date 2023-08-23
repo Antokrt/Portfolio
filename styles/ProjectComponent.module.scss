@@ -172,14 +172,17 @@
     bottom: -170px;
     right: -70px;
     transition: 0.2s;
-    .opacity0{
-      opacity: 0;
-      transition: 0.2s;
-    }
+
     img{
       width: 10vw;
     }
   }
+}
+
+
+.opacityZero{
+  opacity: 0;
+  transition: 0.2s;
 }
 
 

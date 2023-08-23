@@ -26,6 +26,8 @@ interface Project {
 
 export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,description,finish,open,desktopImg,phoneImg,adress,publishGithub,technos,disapear}) => {
 
+    const [ready,setReady] = useState<boolean>(false);
+
         return (
             <div className={disapear ? styles.container + ' ' + anim.slideOutTop : styles.container}>
 
@@ -70,12 +72,10 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                         phoneImg &&
                         <div className={styles.phoneContainer + ' ' + anim.fadeInSlow}>
                             <Image
-                                className={styles.opacity0}
                                 src={phoneImg}
                                 alt="Phone Logo"
                                 width={180}
                                 height={37}
-                                onLoadingComplete={(image) => image.classList.remove('opacity0')}
                                 priority
                             />
                         </div>
@@ -92,6 +92,7 @@ export const ProjectComponent :React.FunctionComponent<Project> = ({title,label,
                             alt="Laptop Logo"
                             width={180}
                             height={37}
+                            priority
                         />
                     </div>
 
