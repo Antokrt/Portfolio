@@ -1,5 +1,9 @@
 @import "var";
 .container{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +47,7 @@
     &:first-letter{
       text-transform: uppercase;
     }
+
     color: $blue;
     font-weight: bold;
     font-size: 40px;
@@ -53,6 +58,9 @@
     text-align: center;
     color: $main;
     font-size: 17px;
+    height: 80px;
+    min-height: 80px;
+    overflow: hidden;
   }
 
   .linkedin{

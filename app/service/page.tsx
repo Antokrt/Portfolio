@@ -31,13 +31,12 @@ const Service = () => {
 
     const openMenu = useSelector((state: RootState) => state.menu.value);
     const [activeKey, setActiveKey] = useState<string | null>(null);
-    const [activeTitle,setActiveTitle] = useState<string | null>(null)
+    const [entranceTitle,setEntranceTitle] =  useState<boolean>(true);
     const [listSkill, setListSkills] = useState<Skill[]>(skillcards);
     const [width,height] = ScreenSize();
     const orientation = useOrientation();
 
-    const [animateTitle, setAnimateTitle] = useState(false);
-
+    const [isAnimate, setIsAnimate] = useState(false);
 
 
     const parseText = (text:string): ReactNode[] => {
@@ -66,23 +65,37 @@ const Service = () => {
         return parseText(skill.text);
     }
 
-    const changeActive = async (key:string) => {
-        if(!animateTitle){
-            await setActiveKey(key);
-            await setActiveTitle(key);
-            await launchAnim();
-        }
+
+
+
+
+    const getOutTitle = async () : Promise<void> => {
+        setEntranceTitle(false);
+        await new Promise<void>((resolve) => setTimeout(() => resolve(),500))
     }
 
-    const launchAnim =  () => {
-        setAnimateTitle(true);
-        setTimeout(() => {
-            setAnimateTitle(false);
-        },2000)
+    const getInTitle = async () :Promise<void> => {
+        setEntranceTitle(true);
+        await new Promise<void>((resolve) => setTimeout(() => resolve(),500))
+    }
+
+    const changeKey = async (key:string) :Promise<void> => {
+        await new Promise<void>((resolve) => {
+            setActiveKey(key);
+            resolve();
+        })
     }
 
 
-
+    const change = async (key:string) :Promise<void | null> =>  {
+        if(isAnimate) return null;
+        if(key === activeKey) return null;
+        setIsAnimate(true);
+        await getOutTitle();
+        await changeKey(key);
+        await getInTitle();
+        setIsAnimate(false);
+    }
 
     return (
         <>
@@ -91,21 +104,21 @@ const Service = () => {
                 openMenu &&
                 <MenuOpen/>
             }
-
             <div className={openMenu ? anim.hidden : styles.container + ' ' + anim.fadeIn}>
 
                 <div className={styles.containerScroll}>
                     <div className={styles.containerMain}>
+
                         <h4>Une expérience web plus solide et plus fiable</h4>
-                        <h2 className={animateTitle ? anim.slideInRightBackShine : ' '}>
-                            {activeTitle ? activeTitle : 'Services et compétences'}
+                        <h2 className={entranceTitle ? anim.slideInRightBackShine : anim.slideOutLeft}>
+                            {activeKey ? activeKey : 'Services et compétences'}
                         </h2>
 
 
                         {
                             width <= 500 &&
                             <div className={styles.jsOnly}>
-                                <JsCard onclick={(title) => changeActive(title)}/>
+                                <JsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                             </div>
                         }
 
@@ -114,22 +127,22 @@ const Service = () => {
                             <div className={styles.containerSkillsPhone}>
                                 {
                                     width > 500 &&
-                                    <JsCard onclick={(title) => changeActive(title)}/>
+                                    <JsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                 }
-                                <ReactCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <NextJsCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <WordpressCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <NodejsCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <NestJSCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <DesignCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <ResponsiveCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                <SeoCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
+                                <ReactCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <NextJsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <WordpressCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <NodejsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <NestJSCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <DesignCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <ResponsiveCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <SeoCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                             </div>
                         }
 
                         {
                             activeKey === null ?
-                                <p className={styles.description}>
+                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft }>
                                     Quelle que soit la taille de votre <strong>entreprise</strong> ou de
                                     vos <strong>idées</strong>, mes compétences en
                                     <strong> développement web </strong> sont à votre service. <br/>Que vous soyez une
@@ -141,7 +154,7 @@ const Service = () => {
                                     vos <strong> idées en réalité
                                     numérique. </strong>
                                 </p> :
-                                <p className={animateTitle ? styles.description + ' ' + anim.slideInLeftBackShine : styles.description}>
+                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft}>
                                     {getText(activeKey) || ''}
                                 </p>
                         }
@@ -151,19 +164,19 @@ const Service = () => {
                             width > 770 &&
                                 <>
                                     <div className={styles.containerSkillsF}>
-                                        <JsCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <ReactCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <NextJsCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <WordpressCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
+                                        <JsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <ReactCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <NextJsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <WordpressCard canPush={!isAnimate} onclick={(title) => change(title)}/>
 
                                     </div>
 
                                     <div className={styles.containerSkillsS}>
-                                        <NodejsCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <NestJSCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <DesignCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <ResponsiveCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
-                                        <SeoCard canPush={!animateTitle} onclick={(title) => changeActive(title)}/>
+                                        <NodejsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <NestJSCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <DesignCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <ResponsiveCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <SeoCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                     </div>
                                 </>
                         }

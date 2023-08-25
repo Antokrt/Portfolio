@@ -9,7 +9,7 @@
   },
   {
     "key": "nextjs",
-    "text": "Basé sur React, <strong>Next.js </strong> est un outil phare pour créer des applications web <strong> ultra-rapides </strong> et <strong> optimisées </strong>. <br />  Grâce à des fonctionnalités comme le <strong> rendu côté serveur </strong> (SSR), <strong> NextJS </strong> vous permettra de passer à la vitesse supérieure pour offrir à vos utilisateurs une  <strong> puissante expérience web. </strong>. "
+    "text": "Basé sur React, <strong>Next.js </strong> est un outil phare pour créer des applications web <strong> ultra-rapides </strong> et <strong> optimisées </strong>. <br />  Grâce à des fonctionnalités comme le <strong> rendu côté serveur </strong> (SSR), <strong> NextJS </strong> vous permettra de passer à la vitesse supérieure pour offrir à vos utilisateurs une  <strong> puissante expérience web</strong>. "
   },
   {
     "key": "wordpress",
