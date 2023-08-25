@@ -4,9 +4,10 @@ import React from "react";
 
 interface JsCardProps{
     onclick: (langage:string) => void;
+    canPush:boolean;
 }
 
-export const JsCard: React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const JsCard: React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -18,7 +19,7 @@ export const JsCard: React.FunctionComponent<JsCardProps> = ({onclick}) => {
     }
 
     return (
-        <div onClick={() => onclick('javascript')} className={styles.container}>
+        <div onClick={() => onclick('javascript')} className={canPush ? styles.container + ' ' + styles.canPush : styles.container}>
             {svg()}
             <p>Javascript</p>
         </div>
@@ -26,7 +27,7 @@ export const JsCard: React.FunctionComponent<JsCardProps> = ({onclick}) => {
 }
 
 
-export const ReactCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const ReactCard:React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -39,7 +40,7 @@ export const ReactCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
     }
 
     return (
-        <div onClick={() => onclick('react')} className={styles.container}>
+        <div onClick={() => onclick('react')} className={canPush ? styles.container + ' ' + styles.canPush : styles.container}>
             {svg()}
             <p>React</p>
         </div>
@@ -47,7 +48,7 @@ export const ReactCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
 }
 
 
-export const NextJsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const NextJsCard:React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
     const svg = () => {
         return (
             <svg
@@ -64,7 +65,7 @@ export const NextJsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('nextjs')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('nextjs')}>
 
             {svg()}
             <p>NextJS</p>
@@ -75,7 +76,7 @@ export const NextJsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
 }
 
 
-export const WordpressCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const WordpressCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
     const svg = () => {
         return (
             <svg
@@ -99,7 +100,7 @@ export const WordpressCard : React.FunctionComponent<JsCardProps> = ({onclick}) 
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('wordpress')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('wordpress')}>
             {svg()}
             <p>Wordpress</p>
         </div>
@@ -107,10 +108,10 @@ export const WordpressCard : React.FunctionComponent<JsCardProps> = ({onclick}) 
 }
 
 
-export const ElementorCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const ElementorCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     return (
-        <div className={styles.container} onClick={() => onclick('elementor')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('elementor')}>
 
             <Image
                 src={"/icons/elementor.png"}
@@ -124,7 +125,7 @@ export const ElementorCard : React.FunctionComponent<JsCardProps> = ({onclick}) 
 }
 
 
-export const NodejsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const NodejsCard:React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -138,7 +139,7 @@ export const NodejsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('nodejs')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('nodejs')}>
             {svg()}
             <p>NodeJS</p>
         </div>
@@ -146,7 +147,7 @@ export const NodejsCard:React.FunctionComponent<JsCardProps> = ({onclick}) => {
 }
 
 
-export const NestJSCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const NestJSCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -159,7 +160,7 @@ export const NestJSCard : React.FunctionComponent<JsCardProps> = ({onclick}) => 
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('nestjs')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('nestjs')}>
             {svg()}
             <p>NestJS</p>
         </div>
@@ -167,7 +168,7 @@ export const NestJSCard : React.FunctionComponent<JsCardProps> = ({onclick}) => 
 }
 
 
-export const DesignCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const DesignCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -196,7 +197,7 @@ export const DesignCard : React.FunctionComponent<JsCardProps> = ({onclick}) => 
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('design')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('design')}>
             {svg()}
             <p>Design</p>
         </div>
@@ -204,7 +205,7 @@ export const DesignCard : React.FunctionComponent<JsCardProps> = ({onclick}) => 
 }
 
 
-export const ResponsiveCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const ResponsiveCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -223,7 +224,7 @@ export const ResponsiveCard : React.FunctionComponent<JsCardProps> = ({onclick})
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('responsive')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('responsive')}>
             {svg()}
             <p>Responsive</p>
         </div>
@@ -231,7 +232,7 @@ export const ResponsiveCard : React.FunctionComponent<JsCardProps> = ({onclick})
 }
 
 
-export const SeoCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
+export const SeoCard : React.FunctionComponent<JsCardProps> = ({onclick,canPush}) => {
 
     const svg = () => {
         return (
@@ -255,7 +256,7 @@ export const SeoCard : React.FunctionComponent<JsCardProps> = ({onclick}) => {
     }
 
     return (
-        <div className={styles.container} onClick={() => onclick('seo')}>
+        <div className={canPush ? styles.container + ' ' + styles.canPush : styles.container} onClick={() => onclick('seo')}>
             {svg()}
             <p>Seo</p>
         </div>
