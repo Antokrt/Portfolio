@@ -184,7 +184,7 @@ const Service = () => {
 
 
 
-                        <p className={styles.linkedin}>Vous pouvez me retrouver sur <Link href={'/#'}>Linkedin</Link> ou
+                        <p className={styles.linkedin}>Vous pouvez me retrouver sur <Link target={'_blank'} href={'https://www.linkedin.com/in/akoreta/'}>Linkedin</Link> ou
                             me contacter par email ici <a href={'mailto:a.koreta@outlook.fr'}>a.koreta@outlook.fr</a>.
                         </p>
                     </div>
