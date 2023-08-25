@@ -78,7 +78,7 @@ const Service = () => {
         setAnimateTitle(true);
         setTimeout(() => {
             setAnimateTitle(false);
-        },5000)
+        },2000)
     }
 
 
