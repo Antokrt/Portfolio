@@ -8,7 +8,7 @@ import {MoonIcon} from "@heroicons/react/24/outline";
 import {useRouter} from "next/router";
 import {   useState } from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {toogle} from "@/app/GlobalRedux/Features/menu/menuSlice";
+import {closeMenu, toogle} from "@/app/GlobalRedux/Features/menu/menuSlice";
 import {RootState} from "@/app/GlobalRedux/store";
 import {MenuOpen} from "@/app/component/MenuOpen";
 import Link from "next/link";
@@ -45,10 +45,8 @@ const Header = () => {
 
 
             <div className={styles.menu}>
-                <div className={animMenu ? styles.active : ' '} onClick={() => {
-                    setAnimMenu(!animMenu);
+                <div className={isOpenMenu ? styles.active : ' '} onClick={() => {
                     dispatch(toogle());
-
                 }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
                         <g strokeWidth="8.5" strokeLinecap="round">
