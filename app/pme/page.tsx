@@ -24,7 +24,7 @@ const PME = () => {
                     title={'Un site vitrine impactant pour booster votre entreprise'}
                     description={"Propulsez votre PME ou PMI avec un site vitrine responsive sur mesure. <br /> Mon objectif ? Vous offrir une présence digitale bien référencée sur tous les appareils, attirant un trafic qualifié pour favoriser votre croissance et la conversion de vos futurs clients. "}
                     positionOfImg={'left'}
-                />
+                 srcImg={''}/>
 
 
             </div>

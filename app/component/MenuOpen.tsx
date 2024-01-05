@@ -45,9 +45,7 @@ export const MenuOpen = () => {
                             <Link href={'/services'}><span>03</span> Services</Link>
                         </li>
 
-                        <li  onClick={() => checkLink('/pme')}>
-                            <Link href={'/pme'}><span>04</span>PME-PMI</Link>
-                        </li>
+
 
                         <li  onClick={() => checkLink('/contact')}>
                             <a target={'_blank'} href={'mailto:a.koreta@outlook.fr'}><span>05</span> Contact</a>
