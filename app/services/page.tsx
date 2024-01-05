@@ -115,6 +115,29 @@ const Service = () => {
                         </h2>
 
 
+
+
+
+
+                        {
+                            activeKey === null ?
+                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft }>
+                                    Quelle que soit la taille de votre <strong>entreprise</strong> ou de
+                                    vos <strong>idées</strong>, mes compétences en
+                                    <strong> développement web </strong> sont à votre service. <br/>Que vous soyez une
+                                    grande
+                                    entreprise, un <strong>particulier </strong> ayant un projet à concrétiser, ou une
+                                    petite <strong>PME</strong> désireuse de
+                                    se démarquer en ligne, je suis <strong> disponible </strong> pour vous aider à
+                                    transformer
+                                    vos <strong> idées en réalité
+                                    numérique. </strong>
+                                </p> :
+                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft}>
+                                    {getText(activeKey) || ''}
+                                </p>
+                        }
+
                         {
                             width <= 500 &&
                             <div className={styles.jsOnly}>
@@ -140,24 +163,6 @@ const Service = () => {
                             </div>
                         }
 
-                        {
-                            activeKey === null ?
-                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft }>
-                                    Quelle que soit la taille de votre <strong>entreprise</strong> ou de
-                                    vos <strong>idées</strong>, mes compétences en
-                                    <strong> développement web </strong> sont à votre service. <br/>Que vous soyez une
-                                    grande
-                                    entreprise, un <strong>particulier </strong> ayant un projet à concrétiser, ou une
-                                    petite <strong>PME</strong> désireuse de
-                                    se démarquer en ligne, je suis <strong> disponible </strong> pour vous aider à
-                                    transformer
-                                    vos <strong> idées en réalité
-                                    numérique. </strong>
-                                </p> :
-                                <p className={entranceTitle ? styles.description + ' ' + anim.slideInRightBackShine : styles.description + ' ' + anim.slideOutLeft}>
-                                    {getText(activeKey) || ''}
-                                </p>
-                        }
 
 
                         {
