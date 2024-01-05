@@ -41,12 +41,16 @@ export const MenuOpen = () => {
                             <Link href={'/projects'}><span>02</span> Projets</Link>
                         </li>
 
-                        <li  onClick={() => checkLink('/service')}>
-                            <Link href={'/service'}><span>03</span> Service</Link>
+                        <li  onClick={() => checkLink('/services')}>
+                            <Link href={'/services'}><span>03</span> Services</Link>
+                        </li>
+
+                        <li  onClick={() => checkLink('/pme')}>
+                            <Link href={'/pme'}><span>04</span>PME-PMI</Link>
                         </li>
 
                         <li  onClick={() => checkLink('/contact')}>
-                            <a target={'_blank'} href={'mailto:a.koreta@outlook.fr'}><span>04</span> Contact</a>
+                            <a target={'_blank'} href={'mailto:a.koreta@outlook.fr'}><span>05</span> Contact</a>
                         </li>
                     </ul>
                 </div>

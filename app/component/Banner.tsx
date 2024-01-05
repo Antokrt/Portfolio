@@ -79,7 +79,7 @@ const Banner = () => {
                             <AnimLink link ={'/projects'} newTab={false}  Icon={<ArrowRightIcon/>} text={'Quelques projets'} />
                             {
                                 width >= 400 &&
-                                <AnimLink link ={'/service'} Icon={<ArrowRightIcon/>} text={'Services'} />
+                                <AnimLink link ={'/services'} Icon={<ArrowRightIcon/>} text={'Services'} />
                             }
                             <AnimLink link={'https://www.linkedin.com/in/akoreta/'} newTab={true} text={'Linkedin'} Icon={<LinkedinSvg/>}/>
 

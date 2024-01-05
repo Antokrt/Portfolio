@@ -6,7 +6,7 @@ import {Providers} from "@/app/GlobalRedux/provider";
 import Loading from "@/app/projects/loading";
 
 export const metadata: Metadata = {
-    title: 'Service',
+    title: 'Services',
 }
 
 export default function RootLayout({

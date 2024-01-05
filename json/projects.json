@@ -5,7 +5,7 @@
     "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application web moderne et agréable...",
     "finish": false,
     "open": true,
-    "adress": "https://ogla.vercel.app/",
+    "adress": "https://ogla.fr/",
     "desktopImg": "/mockup/oglaD.png",
     "phoneImg": "/mockup/oglaP.png",
     "publishGithub": false,
