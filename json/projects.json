@@ -5,10 +5,10 @@
     "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application web moderne et agréable...",
     "finish": false,
     "open": true,
-    "adress": "https://ogla.fr/",
+    "adress": "https://github.com/Antokrt/Ogla",
     "desktopImg": "/mockup/oglaD.png",
     "phoneImg": "/mockup/oglaP.png",
-    "publishGithub": false,
+    "publishGithub": true,
     "technos": [
       "Typescript",
       "React",
