@@ -1,5 +1,43 @@
 [
   {
+    "title": "JPM Rénovation",
+    "label": "Entreprise de rénovation",
+    "description": "Conception et référencement d'un site vitrine moderne et responsive d'une entreprise de rénovation basée en région lyonnaise.",
+    "finish": false,
+    "open": true,
+    "adress": "https://renovation-lyon.fr/",
+    "desktopImg": "/mockup/jpmD.png",
+    "phoneImg": "/mockup/jpmP.png",
+    "publishGithub": false,
+    "technos": [
+      "Wordpress",
+      "Elementor",
+      "Responsive",
+      "Php",
+      "CSS",
+      "Seo"
+    ]
+  },
+  {
+    "title": "Clarence Nettoyage",
+    "label": "Service de nettoyage",
+    "description": "Conception et référencement d'un site vitrine moderne et responsive, mettant en valeur les services de l'entreprise.",
+    "finish": false,
+    "open": true,
+    "adress": "https://clarence-nettoyage.fr/",
+    "desktopImg": "/mockup/clarenceD.png",
+    "phoneImg": "/mockup/clarenceP.png",
+    "publishGithub": false,
+    "technos": [
+      "Wordpress",
+      "Elementor",
+      "Responsive",
+      "Php",
+      "CSS",
+      "Seo"
+    ]
+  },
+  {
     "title": "Ogla",
     "label": "Ebook Application",
     "description": "Ogla est une application web de lecture et d'écriture pour tous, l'objectif d'Ogla est de rendre accessible le monde des livres à travers une application web moderne et agréable...",
