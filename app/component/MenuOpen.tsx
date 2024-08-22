@@ -58,6 +58,7 @@ export const MenuOpen = () => {
                               link={'https://www.linkedin.com/feed/'}/>
                     <AnimLink newTab={true} Icon={<GithubSvg/>} text={'Github'} link={'https://github.com/Antokrt'}/>
                     <AnimLink type={'email'} newTab={true} Icon={<EnvelopeIcon/>} text={'a.koreta@outlook.fr'} link={'mailto:a.koreta@outlook.fr'}/>
+                    <AnimLink newTab={true} Icon={<GithubSvg/>} text={'Portfolio'} link={'https://github.com/Antokrt/Portfolio'}/>
 
                 </div>
             </div>

@@ -13,7 +13,7 @@ import {
     NestJSCard,
     NextJsCard,
     NodejsCard,
-    ReactCard, ResponsiveCard, SeoCard,
+    AngularCard, ResponsiveCard, SeoCard,
     WordpressCard
 } from "@/app/component/SkillCard/card";
 import Link from "next/link";
@@ -152,7 +152,7 @@ const Service = () => {
                                     width > 500 &&
                                     <JsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                 }
-                                <ReactCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                <AngularCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                 <NextJsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                 <WordpressCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                 <NodejsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
@@ -170,7 +170,7 @@ const Service = () => {
                                 <>
                                     <div className={styles.containerSkillsF}>
                                         <JsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
-                                        <ReactCard canPush={!isAnimate} onclick={(title) => change(title)}/>
+                                        <AngularCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                         <NextJsCard canPush={!isAnimate} onclick={(title) => change(title)}/>
                                         <WordpressCard canPush={!isAnimate} onclick={(title) => change(title)}/>
 
