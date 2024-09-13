@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://antonin-koreta.vercel.app/ 
+
+# Sitemaps
+Sitemap: https://antonin-koreta.vercel.app/ /sitemap.xml

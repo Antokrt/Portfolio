@@ -21,6 +21,7 @@ import skillcards from '../../json/skillcards.json';
 import {JSX, useState} from "react";
 import ScreenSize from "@/app/utils/ScreenSizeUtils";
 import {useOrientation} from "@/app/utils/OrientationUtils";
+import Metadata from "@/app/utils/seo/head";
 
 const Service = () => {
 
@@ -99,7 +100,8 @@ const Service = () => {
 
     return (
         <>
-
+<Metadata seoTitle={'Antonin Koreta - Services'} seoDescription={'Développeur Full-Stack spécialisé en React, Angular, NestJS et NextJS. Expertise en création d\'applications web performantes, scalables et centrées sur l\'expérience utilisateur. Passionné par le développement de solutions innovantes, intégration d\'API REST, et conception d\'architectures backend robustes. Découvrez mes projets et compétences en développement front-end et back-end.\n' +
+    '\n'}/>
             {
                 openMenu &&
                 <MenuOpen/>
