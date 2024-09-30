@@ -63,7 +63,6 @@ const Projects = () => {
                 <Metadata seoTitle={'Antonin Koreta'}
                           seoDescription={'Développeur Full-Stack spécialisé en React, Angular, NestJS et NextJS. Expertise en création d\'applications web performantes, scalables et centrées sur l\'expérience utilisateur. Passionné par le développement de solutions innovantes, intégration d\'API REST, et conception d\'architectures backend robustes. Découvrez mes projets et compétences en développement front-end et back-end.\n' +
                               '\n'}/>
-                <Banner/>
                 {
                     openMenu &&
                     <MenuOpen/>
