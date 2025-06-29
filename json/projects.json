@@ -1,5 +1,25 @@
 [
   {
+    "title": "BNBGEN",
+    "label": "SAAS",
+    "description": "Développement d'un SaaS destiné aux hôtes Airbnb, permettant de générer automatiquement des descriptions de logement en quelques secondes grâce à l’IA.",
+    "finish": false,
+    "open": true,
+    "adress": "https://bnbgen.fr",
+    "desktopImg": "/mockup/bnbgenD.png",
+    "publishGithub": false,
+    "technos": [
+      "VueJS",
+      "Nuxt 3",
+      "Nuxt UI",
+      "Tailwind CSS",
+      "OpenAI API",
+      "API Geo Gouv",
+      "Javascript",
+      "Responsive"
+    ]
+  },
+  {
     "title": "JPM Rénovation",
     "label": "Entreprise de rénovation",
     "description": "Conception et référencement d'un site vitrine moderne et responsive d'une entreprise de rénovation basée en région lyonnaise.",
